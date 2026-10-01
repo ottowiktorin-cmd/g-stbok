@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Namn</h2>
+    <form method="post" action="/append">
+      <input
+        type="text"
+        name="namn"
+        size="40"
+        placeholder="Enter text to append"
+      />
+      <h2>email</h2>
+      <input
+        type="text"
+        name="email"
+        size="40"
+        placeholder="Enter text to append"
+      />
+      <h2>hemsida</h2>
+      <input
+        type="text"
+        name="hemsida"
+        size="40"
+        placeholder="Enter text to append"
+      />
+      <h2>tel</h2>
+      <input
+        type="text"
+        name="tel"
+        size="40"
+        placeholder="Enter text to append"
+      />
+      <h2>kommentar</h2>
+      <input
+        type="text"
+        name="kommentar"
+        size="40"
+        placeholder="Enter text to append"
+      />
+      <input type="submit" value="Append" />
+    </form>
+    <h2>File Contents</h2>
+    {% for post in file_content %}
+    <li>
+      <strong>{{ post }}</strong> - {{ email }} {{ hemsida }} {{ tel }} {{
+      kommentar }}
+    </li>
+    {% endfor %}
+  </body>
+</html>
